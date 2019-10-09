@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.ireshmdev.whatsmyage.view.customview.PaddedEditText
+                android:id="@+id/year_birthday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="1996"
+                android:textSize="36sp" />
+
+            <com.ireshmdev.whatsmyage.view.customview.PaddedEditText
+                android:id="@+id/month_birthday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="04"
+                android:textSize="36sp" />
+
+            <com.ireshmdev.whatsmyage.view.customview.PaddedEditText
+                android:id="@+id/day_birthday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="29"
+                android:textSize="36sp" />
+
+            <ImageButton
+                android:id="@+id/date_picker_birthday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:src="@drawable/date_icon" />
+        </LinearLayout>
+
+        <com.ireshmdev.whatsmyage.view.customview.PaddedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/weekday_birthday"
+            android:text="Monday" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.ireshmdev.whatsmyage.view.customview.PaddedEditText
+                android:id="@+id/year_today"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="1996"
+                android:textSize="36sp" />
+
+            <com.ireshmdev.whatsmyage.view.customview.PaddedEditText
+                android:id="@+id/month_today"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="04"
+                android:textSize="36sp" />
+
+            <com.ireshmdev.whatsmyage.view.customview.PaddedEditText
+                android:id="@+id/day_today"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="29"
+                android:textSize="36sp" />
+
+            <ImageButton
+                android:id="@+id/date_picker_today"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:src="@drawable/date_icon" />
+        </LinearLayout>
+
+        <com.ireshmdev.whatsmyage.view.customview.PaddedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/weekday_today"
+            android:text="Monday" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.ireshmdev.whatsmyage.view.customview.PaddedTextView
+                android:id="@+id/age_years"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="23Y"
+                android:textSize="36sp" />
+
+            <com.ireshmdev.whatsmyage.view.customview.PaddedTextView
+                android:id="@+id/age_months"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="4M"
+                android:textSize="36sp" />
+
+            <com.ireshmdev.whatsmyage.view.customview.PaddedTextView
+                android:id="@+id/age_days"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="21D"
+                android:fontFamily="sans-serif-light"
+                android:textSize="36sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
