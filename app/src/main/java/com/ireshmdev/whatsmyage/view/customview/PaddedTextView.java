@@ -10,6 +10,11 @@ import org.apache.commons.lang3.StringUtils;
 public class PaddedTextView extends AppCompatTextView {
     private int padding;
 
+    public PaddedTextView(Context context, int padding) {
+        super(context);
+        this.padding = padding;
+    }
+
     public PaddedTextView(Context context) {
         super(context);
     }
