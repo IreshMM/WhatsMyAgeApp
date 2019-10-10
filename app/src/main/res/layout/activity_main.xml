@@ -22,11 +22,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:inputType="number"
                 android:fontFamily="sans-serif-light"
                 android:text="1996"
                 android:textSize="36sp" />
 
             <com.ireshmdev.whatsmyage.view.customview.PaddedEditText
+                android:inputType="number"
                 android:id="@+id/month_birthday"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -36,6 +38,7 @@
                 android:textSize="36sp" />
 
             <com.ireshmdev.whatsmyage.view.customview.PaddedEditText
+                android:inputType="number"
                 android:id="@+id/day_birthday"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -78,11 +81,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:inputType="number"
                 android:fontFamily="sans-serif-light"
                 android:text="1996"
                 android:textSize="36sp" />
 
             <com.ireshmdev.whatsmyage.view.customview.PaddedEditText
+                android:inputType="number"
                 android:id="@+id/month_today"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -97,6 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
+                android:inputType="number"
                 android:text="29"
                 android:textSize="36sp" />
 
@@ -136,11 +142,13 @@
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
                 android:text="23Y"
+                android:inputType="number"
                 android:textSize="36sp" />
 
             <com.ireshmdev.whatsmyage.view.customview.PaddedTextView
                 android:id="@+id/age_months"
                 android:layout_width="0dp"
+                android:inputType="number"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-light"
@@ -149,6 +157,7 @@
 
             <com.ireshmdev.whatsmyage.view.customview.PaddedTextView
                 android:id="@+id/age_days"
+                android:inputType="number"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

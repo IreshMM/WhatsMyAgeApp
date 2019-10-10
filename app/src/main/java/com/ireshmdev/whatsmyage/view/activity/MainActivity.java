@@ -10,9 +10,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.ireshmdev.whatsmyage.R;
+import com.ireshmdev.whatsmyage.model.Duration;
 import com.ireshmdev.whatsmyage.view.customview.PaddedEditText;
 import com.ireshmdev.whatsmyage.viewmodel.MainActivityViewModel;
 import com.ireshmdev.whatsmyage.viewmodel.util.Util;
@@ -35,13 +37,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        __initElements();
-
         mainActivityViewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
+
+        initElements();
+        addObservers();
     }
 
-    private void __initElements() {
-        System.out.println("MainActivity.__initElements");
+    private void initElements() {
+        System.out.println("MainActivity.initElements");
 
         PaddedEditText yearBirthday = findViewById(R.id.year_birthday);
         PaddedEditText monthBirthday = findViewById(R.id.month_birthday);
@@ -94,11 +97,11 @@ public class MainActivity extends AppCompatActivity {
             this.day = day;
             this.pickerButton = pickerButton;
             this.onChange = onChange;
-            this.calendar = new GregorianCalendar();
+            this.calendar = calendar.getInstance();
             this.pickerButton.setOnClickListener(this);
             this.day.addTextChangedListener(this);
             this.month.addTextChangedListener(this);
-            this.day.addTextChangedListener(this);
+            this.year.addTextChangedListener(this);
         }
 
         @Override
@@ -119,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void afterTextChanged(Editable s) {
+            System.out.println("DateViewContainer.afterTextChanged");
             calendar.set(Calendar.YEAR, getInt(year));
             calendar.set(Calendar.MONTH, getInt(month));
             calendar.set(Calendar.DAY_OF_MONTH, getInt(day));
@@ -133,5 +137,20 @@ public class MainActivity extends AppCompatActivity {
 
     private interface OnChangeListener<T> {
         void call(T t);
+    }
+
+    private void addObservers() {
+        mainActivityViewModel.getDuration().observe(this, new Observer<Duration>() {
+            @Override
+            public void onChanged(Duration duration) {
+                updateDurationView(duration);
+            }
+        });
+    }
+
+    private void updateDurationView(Duration duration) {
+        ageDays.setText(String.valueOf(duration.getDays()));
+        ageMonths.setText(String.valueOf(duration.getMonths()));
+        ageYears.setText(String.valueOf(duration.getYears()));
     }
 }

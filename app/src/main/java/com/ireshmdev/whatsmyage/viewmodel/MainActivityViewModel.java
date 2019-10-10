@@ -1,6 +1,7 @@
 package com.ireshmdev.whatsmyage.viewmodel;
 
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -12,7 +13,7 @@ import java.util.Calendar;
 public class MainActivityViewModel extends ViewModel {
     private Calendar birthday;
     private Calendar presentDay;
-    private MutableLiveData<Duration> duration;
+    private MutableLiveData<Duration> duration = new MediatorLiveData<>();
 
     {
         birthday = Calendar.getInstance();
